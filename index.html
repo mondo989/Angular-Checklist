@@ -3,19 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>Blank Angular Template w/ Bootstrap</title>
-     
+
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
   <link rel="stylesheet" href="css/app.css"/>
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular.min.js"></script>
  <script src="js/controllers.js"></script>
 </head>
       <body >
+
+        <div class="phone">
+          <img class="iphone"  src="./iphone.png" alt="">
             <div class="container">
-                 <div ng-controller="TodoCtrl">
                  
+                 <div ng-controller="TodoCtrl">
                       <nav class="navbar">
                           <div class="navbar-inner">
-                                <h2 class="top-fixed">You have <span class="big-number">{{getTotalTodos()}}</span> things left to do.</h2>
+                                <h2 class="h2-style">You have <span class="big-number">{{getTotalTodos()}}</span> things left to do.</h2>
 
 
 
@@ -24,7 +27,6 @@
                               </ul>
                           </div>
                       </nav>
-            
 
 <!--            
                     <div class="squaredTwo">
@@ -38,7 +40,7 @@
                                  
                        <div class="list-box">
                                  <ul class="unstyled">
-                                          <li class=" list-style list-font " ng-repeat="todo in todos">
+                                          <li class="list-style list-font" ng-click=""  ng-repeat="todo in todos">
                                             <input type="checkbox" ng-model="todo.done">
                                                 <span class="done-{{todo.done}}">{{todo.text}}</span>
                                           </li>
@@ -48,22 +50,25 @@
    
 
              <div class="bottom-controls">
-                            <form class="style-form ">
+                      <form class="style-form ">
+    <br>  
+                                 <input class="frm-button" ng-model="formTodoText" ng-model-instant>
+                                 </input>
+                             <button class="btn right btn-color" ng-click="addTodo()"><i class="icon-plus"></i><span class="button-font"></span></button>
 
-                                    <br>  
-                                   <input class="frm-button" ng-model="formTodoText" ng-model-instant>
-                                   <button class="btn" ng-click="addTodo()"><i class="icon-plus"></i><span class="button-font">Add</span></button>
-                            </form>      
 
-                      <button class="btn-large custom-clear" ng-click="clearCompleted()"><i class="icon-trash"></i>Clear Completed</button>
 
+                      </form>      
+<!--
+                  <button class="btn btn-color btn-large" ng-click="clearCompleted()"><i class="icon-trash"></i><span class="button-font">Clear Completed</span></button>
+
+
+-->
 
                   </div>      
-            </div>
-
-     
+              </div>
           </div><!-- End Container -->  
-    
+    </div>
 
 
     </body>
