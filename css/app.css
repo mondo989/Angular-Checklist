@@ -455,5 +455,6 @@ display: none;
 
   .container{
     width: auto;
+    margin-top: 0;
   }
 }
